@@ -1,0 +1,25 @@
+import random
+
+kullanici_adi=input("Size nasıl hitap edelim? :")
+
+print("Merhaba "+kullanici_adi+" Sayı Tahmin Oyununda Sana Başarılar Dilerim.")
+print("1 - 100 Arası Bir Sayı Tuttum Sence Bu Sayı Kaç?")
+
+#Tutulan sayı belirleme
+Sayi=random.randint(1,100)
+
+Devam = True
+while Devam:
+    #kullanıcıdan veri isteme
+    guess=None
+    while guess != Sayi:
+        guess=int(input("Tahminin Nedir?"))
+
+        #Tutulan sayı ve veri karşılaştırması
+
+        if guess<Sayi:
+            print("Bu sayı benim Tuttuğum sayıdan KÜÇÜK")
+        elif guess>Sayi:
+            print("Bu sayı benim Tuttuğum sayıdan BÜYÜK")
+        else:
+            print("Tebrikler "+kullanici_adi+" Aklımdaki Sayıyı Bildin Sen Bir Dahi Olmalısın :D")
